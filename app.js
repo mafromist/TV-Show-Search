@@ -10,8 +10,9 @@ form.addEventListener("submit", async (e) => {
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
     form.elements.query.value = "";
-  } catch (error) {
-    console.log("Error: ", error);
+    //add here remove previous search results 
+  } catch (err) {
+    console.log("Error: ", err);
   }
 });
 
