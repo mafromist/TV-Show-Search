@@ -23,4 +23,4 @@ const makeImages = (shows) => {
       resultsArea.append(showImage);
     }
   }
-};
+
