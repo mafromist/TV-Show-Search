@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>TV Show Search App</title>
 </head>
+
 <body>
     <header>
         <h1>Search your favourite tv show cover</h1>
     </header>
     <main>
         <section>
-            <form action="" class="searchForm" id="form">
-                <label for="query">Type your tv show name</label>
-                <input type="text" class="searchBar" name="query" placeholder="Search">
-                <button>Bring the Shows</button>
-            </form>
+            <div class="container searchArea">
+                <form action="" class="searchForm" id="form">
+                    <label for="query">Type your tv show name</label>
+                    <input type="text" class="searchBar" name="query" placeholder="Search">
+                    <button>Bring the Shows</button>
+                </form>
+            </div>
+            <div class="container resultsArea">
+            </div>
         </section>
         <section class="searchResults"></section>
     </main>
