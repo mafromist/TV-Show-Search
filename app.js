@@ -5,12 +5,12 @@ const resultsArea = document.querySelector(".resultsArea");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchTerm = form.elements.query.value;
+  resultsArea.innerHTML = "";
   try {
     const config = { params: { q: searchTerm } };
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(res.data);
     form.elements.query.value = "";
-    //add here remove previous search results 
   } catch (err) {
     console.log("Error: ", err);
   }
@@ -24,4 +24,4 @@ const makeImages = (shows) => {
       resultsArea.append(showImage);
     }
   }
-
+};
